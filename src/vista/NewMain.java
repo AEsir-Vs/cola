@@ -5,7 +5,7 @@
  */
 package vista;
 import modelo.Cola;
-import datos.Persona;
+import datos.Vehiculo;
 
 /**
  *
@@ -18,19 +18,7 @@ public class NewMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Cola<Persona> colaPersonas=new Cola<>();
-        
-        colaPersonas.encolar(new Persona("David", "david@uao", "222"));
-        colaPersonas.encolar(new Persona("Davod", "davod@uao", "223"));
-        colaPersonas.encolar(new Persona("Daved", "daved@uao", "224"));
-        colaPersonas.encolar(new Persona("Davud", "davud@uao", "225"));
-        colaPersonas.encolar(new Persona("Juan", "juan@uao", "333"));
-        
-        System.out.println("El contenido de la cola es "+ colaPersonas.toString());
-        
-        colaPersonas.desencolar();
-        
-        System.out.println("El contenido de la cola es "+ colaPersonas.toString());
+   
     }
     
 }
