@@ -55,10 +55,6 @@ public class Vehiculo extends Base {
         return  modelo + "," + nombreDuenoV + "," + tiempoEspera ;
     }
 
-    
-
-
-
     @Override
     public Base copy() {
         return new Vehiculo(modelo, nombreDuenoV, tiempoEspera);

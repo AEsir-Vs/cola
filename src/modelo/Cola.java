@@ -22,10 +22,19 @@ public class Cola <T extends Base>{
         elems.addLast(elemento);
     }
     
-    public T desencolar(){
+    public T receptor1(){
+        
         return elems.removeFirst();
     }
-    
+    public T receptor2(){
+        return elems.removeFirst();
+    }
+    public T receptor3(){
+        return elems.removeFirst();
+    }
+    public T receptor4(){
+        return elems.removeFirst();
+    }
     public boolean estaVacia(){
         return elems.isEmpty();
     }
@@ -36,7 +45,7 @@ public class Cola <T extends Base>{
         for(T elemento : elems){
             sb.append("").append(elemento.toString());
         }
-        sb.append("{");
+        sb.append("}"+"\n");
         return sb.toString();
     }
 }
