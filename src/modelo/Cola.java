@@ -14,9 +14,13 @@ import java.util.LinkedList;
 public class Cola <T extends Base>{
     LinkedList<T> elems;
 
+    
+    
     public Cola() {
         elems=new LinkedList<>();
     }
+    
+    
     
     public void encolar(T elemento){
         elems.addLast(elemento);
@@ -36,7 +40,7 @@ public class Cola <T extends Base>{
         return elems.removeFirst();
     }
     public boolean estaVacia(){
-        return elems.isEmpty();
+        return elems.isEmpty(); //es verdadera cuando esta vacia
     }
     
     @Override
@@ -45,7 +49,7 @@ public class Cola <T extends Base>{
         for(T elemento : elems){
             sb.append("").append(elemento.toString());
         }
-        sb.append("}"+"\n");
+        sb.append("}");
         return sb.toString();
     }
 }
