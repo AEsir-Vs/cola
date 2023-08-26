@@ -38,7 +38,7 @@ public class Tools {
             sb.append("<tr>").append("<th>").append("Vehiculos").append("</th>").append("</tr>");
             do
             {
-                Vehiculo e = q.desencolar();
+                Vehiculo e = q.desenColar();
                 sb.append("<tr>").append("<td>");
                 sb.append(e.getModelo()+"-");
                 sb.append(e.getNombreDuenoV()+"-");
