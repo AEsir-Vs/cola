@@ -26,19 +26,11 @@ public class Cola <T extends Base>{
         elems.addLast(elemento);
     }
     
-    public T receptor1(){
+    public T desenColar(){
         
         return elems.removeFirst();
     }
-    public T receptor2(){
-        return elems.removeFirst();
-    }
-    public T receptor3(){
-        return elems.removeFirst();
-    }
-    public T receptor4(){
-        return elems.removeFirst();
-    }
+    
     public boolean estaVacia(){
         return elems.isEmpty(); //es verdadera cuando esta vacia
     }
