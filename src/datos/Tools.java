@@ -34,17 +34,48 @@ public class Tools {
         
         if (!q.estaVacia())
         {
-            sb.append("<table align=\"center\" border=\"2\">");
-            sb.append("<tr>").append("<th>").append("Vehiculos").append("</th>").append("</tr>");
+            sb.append("<table style=\"width: 100%;\" align=\"center\" border=\"2\">");
+            sb.append("<tr>").append("<th colspan=\"7\" >").append("VEHICULOS").append("</th>").append("</tr>");
+            sb.append("<tr>").append("<th style=\"width: 10%;\">").append("Receptor").append("</th>").append("<th>").append("1").append("</th>").append("<th>").append("2").append("</th>").append("<th>").append("3").append("</th>").append("<th>").append("4").append("</th>").append("<th>").append("5").append("</th>").append("<th>").append("6").append("</th>").append("</tr>");
             do
             {
                 Vehiculo e = q.desenColar();
                 sb.append("<tr>").append("<td>");
+                sb.append("Modelo"+"-");
                 sb.append(e.getModelo()+"-");
+                sb.append(e.getModelo()+"-");
+                sb.append(e.getModelo()+"-");
+                sb.append(e.getModelo()+"-");
+                sb.append(e.getModelo()+"-");
+                sb.append("</td>").append("</tr>");
+                
+                 sb.append("<tr>").append("<td>");
+                sb.append("Dueño"+"-");
                 sb.append(e.getNombreDuenoV()+"-");
+                sb.append(e.getNombreDuenoV()+"-");
+                sb.append(e.getNombreDuenoV()+"-");
+                sb.append(e.getNombreDuenoV()+"-");
+                sb.append(e.getNombreDuenoV()+"-");
+                sb.append(e.getNombreDuenoV()+"-");
+                sb.append("</td>").append("</tr>");
+                
+                sb.append("<tr>").append("<td>");
+                sb.append("Tiempo Espera"+"-");
+                sb.append(e.getTiempoEspera()+"-");
+                sb.append(e.getTiempoEspera()+"-");
+                sb.append(e.getTiempoEspera()+"-");
+                sb.append(e.getTiempoEspera()+"-");
+                sb.append(e.getTiempoEspera()+"-");
                 sb.append(e.getTiempoEspera()+"-");
                 sb.append("</td>").append("</tr>");
+
                 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+                
+                
+                
+                
+
                 
             }
             while (!q.estaVacia());
