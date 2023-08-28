@@ -44,6 +44,8 @@ public class Tools {
                 sb.append(e.getNombreDuenoV()+"-");
                 sb.append(e.getTiempoEspera()+"-");
                 sb.append("</td>").append("</tr>");
+                //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                
             }
             while (!q.estaVacia());
             sb.append("</table>");
