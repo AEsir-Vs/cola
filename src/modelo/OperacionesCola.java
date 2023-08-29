@@ -16,7 +16,7 @@ public class OperacionesCola <T extends Base> {
         Cola<T> colaAux=new Cola<>();
         Cola<T> colaDuplicada=new Cola<>();
         
-        while (C01.estaVacia()){
+        while (!C01.estaVacia()){
             
             T elemento = C01.desenColar();
             colaAux.encolar(elemento);
