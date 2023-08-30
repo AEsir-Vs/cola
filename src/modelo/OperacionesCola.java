@@ -8,7 +8,10 @@ package modelo;
 
 /**
  *
- * @author andres.de
+ * @author Esteban V 
+ * @author Joan Salcedo 2220769 joan.salcedo@uao.edu.co
+ * @author Carlos Garzon 2220968 carlos_andres.garzon@uao.edu.co
+ * @author Emmanuel Carrera
  */
 public class OperacionesCola <T extends Base> {
     
