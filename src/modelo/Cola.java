@@ -41,7 +41,7 @@ public class Cola <T extends Base>{
         for(T elemento : elems){
             sb.append("").append(elemento.toString());
         }
-        sb.append(",}");
+        sb.append("}");
         return sb.toString();
     }
 }

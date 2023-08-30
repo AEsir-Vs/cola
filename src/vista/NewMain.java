@@ -17,8 +17,16 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-   
+        
+        Cola<Vehiculo> colaVehiculo = new Cola<>();
+        colaVehiculo.encolar(new Vehiculo("tvs", "Joan", 0));
+        colaVehiculo.encolar(new Vehiculo("suzuki", "Marco", 0));
+        colaVehiculo.encolar(new Vehiculo("Nissan", "Aristides", 0));
+        Cola<Vehiculo> colaDuplicada= modelo.OperacionesCola.duplicarCola(colaVehiculo);
+        colaVehiculo.desenColar();
+       
+        System.out.println("Cola original "+colaVehiculo);
+        System.out.println("Cola duplicada "+colaDuplicada);
     }
     
 }

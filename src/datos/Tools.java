@@ -24,7 +24,7 @@ public class Tools {
      * @param p
      * @return 
      */
-    //<editor-fold defaultstate="collapsed" desc="Metodo :: String convertirPilaAHtml(Pila<Valor>)">
+    //<editor-fold defaultstate="collapsed" desc="Metodo :: String convertirColaAHtml(Cola<Valor>)">
     public static String convertirColaAHtml(Cola<Vehiculo> p)
     {
         StringBuilder sb = new StringBuilder("<html>");
@@ -36,46 +36,25 @@ public class Tools {
         {
             sb.append("<table style=\"width: 100%;\" align=\"center\" border=\"2\">");
             sb.append("<tr>").append("<th colspan=\"7\" >").append("VEHICULOS").append("</th>").append("</tr>");
-            sb.append("<tr>").append("<th style=\"width: 10%;\">").append("Receptor").append("</th>").append("<th>").append("1").append("</th>").append("<th>").append("2").append("</th>").append("<th>").append("3").append("</th>").append("<th>").append("4").append("</th>").append("<th>").append("5").append("</th>").append("<th>").append("6").append("</th>").append("</tr>");
+            sb.append("<tr>").append("<th style=\"width: 10%;\">").append("Receptor").append("</th>").append("<th>").append("1").append("</th>").append("<th>").append("2").append("</th>").append("<th>").append("3").append("</th>").append("<th>").append("4").append("</th>").append("</tr>");
             do
             {
                 Vehiculo e = q.desenColar();
+                sb.append("<th>").append("</th>");
                 sb.append("<tr>").append("<td>");
                 sb.append("Modelo"+"-");
-                sb.append(e.getModelo()+"-");
-                sb.append(e.getModelo()+"-");
-                sb.append(e.getModelo()+"-");
-                sb.append(e.getModelo()+"-");
                 sb.append(e.getModelo()+"-");
                 sb.append("</td>").append("</tr>");
                 
                  sb.append("<tr>").append("<td>");
-                sb.append("Dueño"+"-");
-                sb.append(e.getNombreDuenoV()+"-");
-                sb.append(e.getNombreDuenoV()+"-");
-                sb.append(e.getNombreDuenoV()+"-");
-                sb.append(e.getNombreDuenoV()+"-");
-                sb.append(e.getNombreDuenoV()+"-");
+                sb.append("nombre"+"-");
                 sb.append(e.getNombreDuenoV()+"-");
                 sb.append("</td>").append("</tr>");
                 
                 sb.append("<tr>").append("<td>");
                 sb.append("Tiempo Espera"+"-");
                 sb.append(e.getTiempoEspera()+"-");
-                sb.append(e.getTiempoEspera()+"-");
-                sb.append(e.getTiempoEspera()+"-");
-                sb.append(e.getTiempoEspera()+"-");
-                sb.append(e.getTiempoEspera()+"-");
-                sb.append(e.getTiempoEspera()+"-");
                 sb.append("</td>").append("</tr>");
-
-                //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-                
-                
-                
-                
-
                 
             }
             while (!q.estaVacia());
@@ -83,7 +62,7 @@ public class Tools {
         }
         else
         {
-            sb.append("<h1 align=\"center\">").append("Pila Vacia").append("</h1>");
+            sb.append("<h1 align=\"center\">").append("Cola Vacia").append("</h1>");
         }
         
         sb.append("</html>");
@@ -99,7 +78,7 @@ public class Tools {
      * @param texto
      * @return 
      */
-    //<editor-fold defaultstate="collapsed" desc="String convertirPilaAHtml(Pila<Valor> p, String texto)">
+    //<editor-fold defaultstate="collapsed" desc="String convertirColaAHtml(Pila<Valor> p, String texto)">
     public static String convertirColaAHtml(Cola<Vehiculo> p, String texto)
     {
         String html = "<br><center>Se retiro " + texto + "</center></br>";
