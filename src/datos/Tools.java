@@ -40,20 +40,19 @@ public class Tools {
             do
             {
                 Vehiculo e = q.desenColar();
-                sb.append("<th>").append("</th>");
                 sb.append("<tr>").append("<td>");
-                sb.append("Modelo"+"-");
-                sb.append(e.getModelo()+"-");
+                sb.append("nombre").append("</td>");
+                sb.append("<td>").append(e.getModelo());
                 sb.append("</td>").append("</tr>");
                 
                  sb.append("<tr>").append("<td>");
-                sb.append("nombre"+"-");
-                sb.append(e.getNombreDuenoV()+"-");
+                sb.append("modelo").append("</td>");
+                sb.append("<td>").append(e.getNombreDuenoV());
                 sb.append("</td>").append("</tr>");
                 
                 sb.append("<tr>").append("<td>");
-                sb.append("Tiempo Espera"+"-");
-                sb.append(e.getTiempoEspera()+"-");
+                sb.append("Tiempo Espera").append("</td>");
+                sb.append("<td>").append(e.getTiempoEspera());
                 sb.append("</td>").append("</tr>");
                 
             }
