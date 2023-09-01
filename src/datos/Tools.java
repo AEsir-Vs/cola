@@ -28,7 +28,7 @@ public class Tools {
      * @return 
      */
     //<editor-fold defaultstate="collapsed" desc="Metodo :: String convertirColaAHtml(Cola<Valor>)">
-    public static String convertirColaAHtml(Cola<Vehiculo> p)
+    public static String convertirColaAHtml2(Cola<Vehiculo> p)
     {
         StringBuilder sb = new StringBuilder("<html>");
         Cola<Vehiculo> q = OperacionesCola.duplicarCola(p);
@@ -46,17 +46,41 @@ public class Tools {
                 sb.append("<tr>").append("<td>");
                 sb.append("nombre").append("</td>");
                 sb.append("<td>").append(e.getModelo());
-                sb.append("</td>").append("</tr>");
+                sb.append("</td>");
+                 sb.append("<td>").append(e.getModelo());
+                sb.append("</td>");
+                sb.append("<td>").append(e.getModelo());
+                sb.append("</td>");
+                sb.append("<td>").append(e.getModelo());
+                sb.append("</td>");
+                sb.append("</tr>");
                 
                  sb.append("<tr>").append("<td>");
                 sb.append("modelo").append("</td>");
                 sb.append("<td>").append(e.getNombreDuenoV());
-                sb.append("</td>").append("</tr>");
+                sb.append("</td>");
+                sb.append("<td>").append(e.getNombreDuenoV());
+                sb.append("</td>");
+                sb.append("<td>").append(e.getNombreDuenoV());
+                sb.append("</td>");
+                sb.append("<td>").append(e.getNombreDuenoV());
+                sb.append("</td>");
+                        
+                sb.append("</tr>");
                 
                 sb.append("<tr>").append("<td>");
                 sb.append("Tiempo Espera").append("</td>");
                 sb.append("<td>").append(e.getTiempoEspera());
-                sb.append("</td>").append("</tr>");
+                sb.append("</td>");
+                sb.append("<td>").append(e.getTiempoEspera());
+                sb.append("</td>");
+                sb.append("<td>").append(e.getTiempoEspera());
+                sb.append("</td>");
+                sb.append("<td>").append(e.getTiempoEspera());
+                sb.append("</td>");
+    
+                sb.append("</tr>");
+                
                 
             }
             while (!q.estaVacia());
@@ -96,4 +120,47 @@ public class Tools {
         return sb.toString();
     }
     //</editor-fold>
+    
+    public static String convertirColaAHtml(Cola<Vehiculo> p)
+    {
+        StringBuilder sb = new StringBuilder("<html>");
+        Cola<Vehiculo> q = OperacionesCola.duplicarCola(p);
+        
+        sb.append("<noscript>").append("</noscript>");
+        
+        if (!q.estaVacia())
+        {
+            sb.append("<table style=\"width: 100%;\" align=\"center\" border=\"2\">");
+            sb.append("<tr>").append("<th colspan=\"7\" >").append("VEHICULOS").append("</th>").append("</tr>");
+            sb.append("<tr>").append("<th style=\"width: 10%;\">").append("nombre").append("</th>").append("<th>").append("modelo").append("</th>").append("<th>").append("tiempo espera").append("</th>");
+            do
+            {
+                Vehiculo e = q.desenColar();
+                sb.append("<tr>");
+                sb.append("<td>").append(e.getModelo());
+                sb.append("</td>");
+                 sb.append("<td>").append(e.getNombreDuenoV());
+                sb.append("</td>");
+                sb.append("<td>").append(e.getTiempoEspera());
+                sb.append("</td>");
+                sb.append("</tr>");
+                
+                
+                
+                
+                
+            }
+            while (!q.estaVacia());
+            sb.append("</table>");
+        }
+        else
+        {
+            sb.append("<h1 align=\"center\">").append("Cola Vacia").append("</h1>");
+        }
+        
+        sb.append("</html>");
+        
+        return sb.toString();
+    }
 }
+
